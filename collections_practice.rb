@@ -16,6 +16,12 @@ def swap_elements(array)
   array[2] = temp
 array
 end 
+def swap_elements_from_to(array, index1,index2)
+    temp = array[index1] 
+  array[index1] = array[index2]
+  array[index2] = temp
+array
+end
 
 def reverse_array(array)
   array.reverse
@@ -30,9 +36,7 @@ def find_a(array)
 end 
 
 def sum_array(array)
-  total = 0 
-  array.each{|el| total += el}
-  total
+  array.inject(:+)
 end 
 
 def add_s(array)
