@@ -25,7 +25,8 @@ def reverse_array(array)
   new 
 end 
 
-def kesha_maker
+def kesha_maker(array)
+  array.each {|word| word[2] = "$"}
 end 
 
 
@@ -37,6 +38,12 @@ def sum_array(array)
  array.inject(0) {|num, x| num + x}
 end 
 
-def add_s(array
-  new << array.each.collect {|word| word + "s"}
+def add_s(array)
+  array.collect do |word|
+    if word == array[1]
+      word 
+    else 
+      word + "s"
+    end
+  end 
 end
